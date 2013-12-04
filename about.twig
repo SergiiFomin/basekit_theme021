@@ -1,0 +1,88 @@
+{% extends "layout.twig" %}
+
+{% block content %}
+
+<div class="bg-glow">
+    <div class="global">
+        <!--header-->
+        <header>
+            <div class="header">
+                <div class="container">
+                    <div class="row">
+                        <article class="span12">
+
+                            {{widget('logo', 'name', {"defaultlogo": asset('images/logo.png')})|raw}}
+                            <div class="overflow">
+                                {{widget('socialicons', 'socialicons', {'googleplus': 'https://plus.google.com', 'linkedin':'http://www.linkedin.com', 'facebook': 'https://www.facebook.com', 'twitter': 'https://twitter.com', 'youtube': 'https://www.youtube.com', 'rss': '#'})|raw}}
+                                {{widget('profile', 'form', { 'profileType':'form'})|raw}}
+                            </div>
+                            <div class="clear"></div>
+                            {{widget('extendednavigation', 'extendednavigation', {"align":"center"})|raw}}
+
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!--content-->
+        <div class="container innerIndent">
+            <div class="row">
+                <article class="span12">
+
+                    {{zone('main')|raw}}
+
+                    <div class="row">
+                        <article class="span4">
+                            <div class="contentInner">
+                                {{widget('content', 'title1', {content: '<h2>History</h2>', lines: 'all'})|raw}}
+                                {{widget('image', 'image1', { 'src': asset('images/page2-img1.jpg'), 'imageWidth': '480px'})|raw}}
+                                {{widget('content', 'content1', {content: '<p><strong>Lorem ipsum dolor sit amet conse ctetur adipisicing elit</strong></p><p>Praesent faucibus rutrum odio at rhoncus. Pellentesque vitae tortor id neque fermentum pretium. Maecenas ac lacus ut neque rhoncus laoreet sed id tellus. Donec justo tellus, tincidunt vitae pellentesque nec, pharetra a orci. Praesent nunc nunc, egestas eget.</p><p>Vestibulum congue congue dui ut porta. Aenean laoreet viverra turpis, a commodo purus eleifend a. Nam lacus dui; egestas ut aliquam nec, eleifend sit amet est. Nam justo elit, dictum id tempus a, ultricies tempus lacus.</p>', lines: 'all'})|raw}}
+                            </div>
+                        </article>
+                        <article class="span4">
+                            <div class="contentInner">
+                                {{widget('content', 'title2', {content: '<h2>about us</h2>', lines: 'all'})|raw}}
+                                {{widget('content', 'content2', {content: '<p><strong>Pellentesque vitae tortor id neque fermentum pretium aecenas ac lacus</strong></p><p>Praesent faucibus rutrum odio at rhoncus. Pellentesque vitae tortor id neque fermentum pretium. Maecenas ac lacus ut neque rhoncus laoreet sed id tellus. Donec justo tellus, tincidunt vitae pellentesque nec, pharetra.</p><p><strong>Fermentum pretium aecenas ac lacus ut neque rhoncus laoreet sed id tellus</strong></p><p>Pellentesque vitae tortor id neque fermentum pretium. Maecenas ac lacus ut neque rhoncus laoreet sed id tellus. Donec justo tellus, tincidunt vitae pellentesque nec, pharetra a orci. Praesent nunc nunc, egestas eget.</p><p><strong>Tortor id neque fermentum pretium aecenas ac lacus ut neque rhoncus</strong></p><p>Maecenas ac lacus ut neque rhoncus laoreet ed id tellus. Donec justo tellus, tincidunt vitae pellentesque nec, pharetra a orci. Praesent nunc nunc, egestas eget elementum sed.</p>', lines: 'all'})|raw}}
+                                {{widget('button', 'button', {italic: false, text:'Read more', 'align':'widget-align-left'})|raw}}
+                            </div>
+                        </article>
+                        <article class="span4">
+                            <div class="contentInner">
+                                {{widget('content', 'title3', {content: '<h2>our gallery</h2>', lines: 'all'})|raw}}
+                                {{widget('image', 'image1column2', { 'src': asset('images/page2-img2.jpg'), 'imageWidth': '480px'})|raw}}
+                                {{widget('image', 'image1column2', { 'src': asset('images/page2-img3.jpg'), 'imageWidth': '480px'})|raw}}
+                                {{widget('image', 'image1column2', { 'src': asset('images/page2-img4.jpg'), 'imageWidth': '480px'})|raw}}
+                                {{widget('image', 'image1column2', { 'src': asset('images/page2-img5.jpg'), 'imageWidth': '480px'})|raw}}
+                                {{widget('image', 'image1column2', { 'src': asset('images/page2-img6.jpg'), 'imageWidth': '480px'})|raw}}
+                                {{widget('image', 'image1column2', { 'src': asset('images/page2-img7.jpg'), 'imageWidth': '480px'})|raw}}
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="contentInner">
+                        {{widget('content', 'title4', {content: '<h2>TESTIMONIALS</h2>', lines: 'all'})|raw}}
+                        {{widget('content', 'content1column4', {content: '<blockquote>Maecenas ac lacus ut neque rhoncus laoreet sed id tellus. Donec justo tellus, tincidunt vitae pellentesque nec, pharetra a orci. Praesent nunc nunc, egestas eget.</blockquote><strong>John Franklin</strong><br /><a href="mailto:www.demolink.org">www.demolink.org</a>', lines: 'all'})|raw}}
+                        {{widget('content', 'content2column4', {content: '<blockquote>Honcus laoreet sed id tellus. Donec justo tellus, tincidunt vitae pellentesque nec, pharetra a orci. Praesent nunc nunc, egestas eget. Vestib ulum congue congue dui ut.</blockquote><strong>Sandra Bullock</strong><br /><a href="mailto:www.demolink.org">www.demolink.org</a>', lines: 'all'})|raw}}
+                        {{widget('content', 'content3column4', {content: '<blockquote>Donec justo tellus, tincidunt vitae pellentesque nec, pharetra a orci. Praesent nunc nunc, egestas eget. Vesti bulum congue congue dui ut porta. Aenean laoreet viverra.</blockquote><strong>Mark Johnson</strong><br /><a href="mailto:www.demolink.org">www.demolink.org</a>', lines: 'all'})|raw}}
+                        {{widget('content', 'content4column4', {content: '<blockquote>Pellentesque nec, pharetra a orci. Praesent nunc nunc, egestas eget. Vestibulum congue congue dui ut porta. Aenean laoreet viverra turpis, a commodo purus eleifend a.</blockquote><strong>Helen Tompson</strong><br /><a href="mailto:www.demolink.org">www.demolink.org</a>', lines: 'all'})|raw}}
+                    </div>
+
+                </article>
+            </div>
+        </div>
+        <!--footer-->
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <section class="span12">
+                        {{widget('companyname', 'companyname', {"business": "Archo"})|raw}}
+                        {{widget('profile', 'copyright', { 'profileType':'copyright', 'copyright':'&copy 2014. All rights reserved'})|raw}}
+                        {{widget('space', 'space', {'height': '30'})|raw}}
+                    </section>
+                </div>
+            </div>
+        </footer>
+    </div>    
+</div>
+
+{% endblock %}

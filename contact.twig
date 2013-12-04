@@ -1,0 +1,73 @@
+{% extends "layout.twig" %}
+
+{% block content %}
+
+<div class="bg-glow">
+    <div class="global">
+        <!--header-->
+        <header>
+            <div class="header">
+                <div class="container">
+                    <div class="row">
+                        <article class="span12">
+
+                            {{widget('logo', 'name', {"defaultlogo": asset('images/logo.png')})|raw}}
+                            <div class="overflow">
+                                {{widget('socialicons', 'socialicons', {'googleplus': 'https://plus.google.com', 'linkedin':'http://www.linkedin.com', 'facebook': 'https://www.facebook.com', 'twitter': 'https://twitter.com', 'youtube': 'https://www.youtube.com', 'rss': '#'})|raw}}
+                                {{widget('profile', 'form', { 'profileType':'form'})|raw}}
+                            </div>
+                            <div class="clear"></div>
+                            {{widget('extendednavigation', 'extendednavigation', {"align":"center"})|raw}}
+
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!--content-->
+        <div class="container innerIndent">
+            <div class="row">
+                <section class="span12">
+
+                    {{widget('content', 'title1', {content: '<h2>contact us </h2>', lines: 'all'})|raw}}
+                    {{widget('map', 'map', {'height': '650', 'zoom': '15', 'address': 'profile'})|raw}}
+
+                    <div class="row">
+                        <article class="span4">
+                            
+                            {{widget('content', 'title2', {content: '<h2>Addresses</h2>', lines: 'all'})|raw}}
+                            {{widget('content', 'addressname1', {content: '<strong class="type">Address 1:</strong>', lines: 'all'})|raw}}
+                            {{widget('profile', 'address1', { 'profileType':'address', 'address':'9870 St Vincent Place, Glasgow, DC 45 Fr 45.'})|raw}}
+                            {{widget('content', 'addressname1', {content: '<strong class="type">Phones:</strong>', lines: 'all'})|raw}}
+                            {{widget('profile', 'phone1', { 'profileType':'phone', 'phone':'+1 800 559 6580'})|raw}}
+                            {{widget('profile', 'phone2', { 'profileType':'phone', 'phone':'+1 800 603 6035'})|raw}}
+                            {{widget('content', 'addressname2', {content: '<strong class="type">Address 2:</strong>', lines: 'all'})|raw}}
+                            {{widget('profile', 'address1', { 'profileType':'address', 'address':'9863 - 9867 Mill Road, Cambridge, MG09 99HT.'})|raw}}
+                            
+                        </article>
+                        <article class="span8">
+                            
+                            {{widget('content', 'title1', {content: '<h2>Contact Form</h2>', lines: 'all'})|raw}}                            
+                            {{zone('main')|raw}}
+
+                        </article>
+                    </div>
+                </section>
+            </div>
+        </div>
+        <!--footer-->
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <section class="span12">
+                        {{widget('companyname', 'companyname', {"business": "Archo"})|raw}}
+                        {{widget('profile', 'copyright', { 'profileType':'copyright', 'copyright':'&copy 2014. All rights reserved'})|raw}}
+                        {{widget('space', 'space', {'height': '30'})|raw}}
+                    </section>
+                </div>
+            </div>
+        </footer>
+    </div>    
+</div>
+
+{% endblock %}
