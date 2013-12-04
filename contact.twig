@@ -31,6 +31,7 @@
 
                     {{widget('content', 'title1', {content: '<h2>contact us </h2>', lines: 'all'})|raw}}
                     {{widget('map', 'map', {'height': '650', 'zoom': '15', 'address': 'profile'})|raw}}
+                    {{widget('space', 'space', {'height': '50'})|raw}}
 
                     <div class="row">
                         <article class="span4">
@@ -43,11 +44,12 @@
                             {{widget('profile', 'phone2', { 'profileType':'phone', 'phone':'+1 800 603 6035'})|raw}}
                             {{widget('content', 'addressname2', {content: '<strong class="type">Address 2:</strong>', lines: 'all'})|raw}}
                             {{widget('profile', 'address1', { 'profileType':'address', 'address':'9863 - 9867 Mill Road, Cambridge, MG09 99HT.'})|raw}}
+                            {{widget('space', 'space', {'height': '50'})|raw}}
                             
                         </article>
                         <article class="span8">
                             
-                            {{widget('content', 'title1', {content: '<h2>Contact Form</h2>', lines: 'all'})|raw}}                            
+                            {{widget('content', 'title1', {content: '<h2>Contact Form</h2>', lines: 'all'})|raw}}
                             {{zone('main')|raw}}
 
                         </article>
