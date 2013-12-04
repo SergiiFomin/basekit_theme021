@@ -320,7 +320,11 @@ time{
 }
 strong{
   color: @dark;
-  font-size: @baseFontSize + 2
+  font-size: @baseFontSize + 2;
+  &.type{
+    display: block;
+    padding: @baseLineHeight 0 @baseLineHeight - 10;
+  }
 }
 figure{
   margin: 0;
